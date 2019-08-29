@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BankingPassword"
         mc:Ignorable="d"
-        Title="Banking Password" Height="320" Width="370">    
+        Title="Banking Password" Height="290" Width="370">    
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
             
@@ -50,24 +50,8 @@
                 <TextBox x:Name="result1TextBox" IsEnabled="False" Grid.Column="0"></TextBox>
                 <TextBox x:Name="result2TextBox" IsEnabled="False" Grid.Column="2"></TextBox>
                 <TextBox x:Name="result3TextBox" IsEnabled="False" Grid.Column="4"></TextBox>
-            </Grid>
-            
-            <Grid HorizontalAlignment="Stretch" Margin="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <Button x:Name="copyResult1Button" Content="Copy" Grid.Column="0"></Button>
-                <Button x:Name="copyResult2Button" Content="Copy" Grid.Column="2"></Button>
-                <Button x:Name="copyResult3Button" Content="Copy" Grid.Column="4"></Button>
-            </Grid>
-            <StackPanel Orientation="Horizontal">
-               
-            </StackPanel>         
+            </Grid>          
+       
 
         </StackPanel>
     </Grid>
