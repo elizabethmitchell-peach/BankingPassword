@@ -21,9 +21,9 @@
                     <ColumnDefinition Width="10"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox x:Name="index1TextBox" Grid.Column="0"></TextBox>
-                <TextBox x:Name="index2TextBox" Grid.Column="2"></TextBox>
-                <TextBox x:Name="index3TextBox" Grid.Column="4"></TextBox>
+                <TextBox x:Name="index1TextBox" Grid.Column="0" PreviewTextInput="IndexTextBox_PreviewTextInput"></TextBox>
+                <TextBox x:Name="index2TextBox" Grid.Column="2" PreviewTextInput="IndexTextBox_PreviewTextInput"></TextBox>
+                <TextBox x:Name="index3TextBox" Grid.Column="4" PreviewTextInput="IndexTextBox_PreviewTextInput"></TextBox>
             </Grid>
 
             <Grid HorizontalAlignment="Stretch" Margin="10">
