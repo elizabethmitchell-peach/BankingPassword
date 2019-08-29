@@ -10,7 +10,7 @@
         <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
             
             <Label Content="Password" HorizontalAlignment="Stretch" />
-            <PasswordBox HorizontalAlignment="Stretch"  Margin="10" />
+            <PasswordBox HorizontalAlignment="Stretch"  Margin="10" Name="passwordBox" />
             
             <Label Content="Indexes" HorizontalAlignment="Stretch" />
             <Grid HorizontalAlignment="Stretch" Margin="10">
@@ -21,9 +21,9 @@
                     <ColumnDefinition Width="10"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox x:Name="index1" Grid.Column="0"></TextBox>
-                <TextBox x:Name="index2" Grid.Column="2"></TextBox>
-                <TextBox x:Name="index3" Grid.Column="4"></TextBox>
+                <TextBox x:Name="index1TextBox" Grid.Column="0"></TextBox>
+                <TextBox x:Name="index2TextBox" Grid.Column="2"></TextBox>
+                <TextBox x:Name="index3TextBox" Grid.Column="4"></TextBox>
             </Grid>
 
             <Grid HorizontalAlignment="Stretch" Margin="10">
@@ -33,7 +33,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Button x:Name="generateButton" Content="Generate" Grid.Column="0" ></Button>
-                <Button x:Name="clearButton" Content="Clear" Grid.Column="2"></Button>
+                <Button x:Name="clearButton" Content="Clear" Grid.Column="2" Click="ClearButton_Click"></Button>
             </Grid>
             
             <Separator Height="1" Margin="5"/>
@@ -47,9 +47,9 @@
                     <ColumnDefinition Width="10"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox x:Name="result1" IsEnabled="False" Grid.Column="0"></TextBox>
-                <TextBox x:Name="result2" IsEnabled="False" Grid.Column="2"></TextBox>
-                <TextBox x:Name="result3" IsEnabled="False" Grid.Column="4"></TextBox>
+                <TextBox x:Name="result1TextBox" IsEnabled="False" Grid.Column="0"></TextBox>
+                <TextBox x:Name="result2TextBox" IsEnabled="False" Grid.Column="2"></TextBox>
+                <TextBox x:Name="result3TextBox" IsEnabled="False" Grid.Column="4"></TextBox>
             </Grid>
             
             <Grid HorizontalAlignment="Stretch" Margin="10">

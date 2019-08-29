@@ -24,5 +24,19 @@ namespace BankingPassword
         {
             InitializeComponent();
         }
+
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            passwordBox.Password = string.Empty;
+
+            index1TextBox.Text = string.Empty;
+            index2TextBox.Text = string.Empty;
+            index3TextBox.Text = string.Empty;
+
+            result1TextBox.Text = string.Empty;
+            result2TextBox.Text = string.Empty;
+            result3TextBox.Text = string.Empty;
+
+        }
     }
 }
