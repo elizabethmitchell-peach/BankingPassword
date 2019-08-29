@@ -5,8 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BankingPassword"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Banking Password" Height="320" Width="370">    
     <Grid>
-        
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
+            
+            <Label Content="Password" HorizontalAlignment="Stretch" />
+            <PasswordBox HorizontalAlignment="Stretch"  Margin="10" />
+            
+            <Label Content="Indexes" HorizontalAlignment="Stretch" />
+            <Grid HorizontalAlignment="Stretch" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="index1" Grid.Column="0"></TextBox>
+                <TextBox x:Name="index2" Grid.Column="2"></TextBox>
+                <TextBox x:Name="index3" Grid.Column="4"></TextBox>
+            </Grid>
+
+            <Grid HorizontalAlignment="Stretch" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="generateButton" Content="Generate" Grid.Column="0" ></Button>
+                <Button x:Name="clearButton" Content="Clear" Grid.Column="2"></Button>
+            </Grid>
+            
+            <Separator Height="1" Margin="5"/>
+            
+            <Label Content="Result"></Label>
+            <Grid HorizontalAlignment="Stretch" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/> 
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="result1" IsEnabled="False" Grid.Column="0"></TextBox>
+                <TextBox x:Name="result2" IsEnabled="False" Grid.Column="2"></TextBox>
+                <TextBox x:Name="result3" IsEnabled="False" Grid.Column="4"></TextBox>
+            </Grid>
+            
+            <Grid HorizontalAlignment="Stretch" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="copyResult1Button" Content="Copy" Grid.Column="0"></Button>
+                <Button x:Name="copyResult2Button" Content="Copy" Grid.Column="2"></Button>
+                <Button x:Name="copyResult3Button" Content="Copy" Grid.Column="4"></Button>
+            </Grid>
+            <StackPanel Orientation="Horizontal">
+               
+            </StackPanel>         
+
+        </StackPanel>
     </Grid>
 </Window>
