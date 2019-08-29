@@ -38,6 +38,8 @@ namespace BankingPassword
             result2TextBox.Text = string.Empty;
             result3TextBox.Text = string.Empty;
 
+            ValidationTextBlock.Visibility = Visibility.Hidden;
+
         }
 
         private void IndexTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -48,6 +50,8 @@ namespace BankingPassword
 
         private void GenerateButton_Click(object sender, RoutedEventArgs e)
         {
+            ValidationTextBlock.Visibility = Visibility.Hidden;
+
             string password = passwordBox.Password;
             string index1Text = index1TextBox.Text;
             string index2Text = index2TextBox.Text;
@@ -61,12 +65,27 @@ namespace BankingPassword
             int.TryParse(index2Text, out index2);
             int.TryParse(index3Text, out index3);
 
-            if (index1 > 0 && index2 > 0 && index3 > 0 && !string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(password))
+            {
+                ValidationTextBlock.Visibility = Visibility.Visible;
+                ValidationTextBlock.Text = "Please enter a password";
+            }
+            else if (index1 < 1 | index2 < 1 | index3 < 1)
+            {
+                ValidationTextBlock.Visibility = Visibility.Visible;
+                ValidationTextBlock.Text = "Please enter all indexes";
+            }
+            else if (index1 > password.Length | index2 > password.Length | index3 > password.Length)
+            {
+                ValidationTextBlock.Visibility = Visibility.Visible;
+                ValidationTextBlock.Text = "Indexes cannot be larger than the length of the password";
+            }
+            else
             {
                 result1TextBox.Text = password.Substring(index1 - 1, 1);
                 result2TextBox.Text = password.Substring(index2 - 1, 1);
                 result3TextBox.Text = password.Substring(index3 - 1, 1);
-            }
+            }         
 
         }
     }

@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BankingPassword"
         mc:Ignorable="d"
-        Title="Banking Password" Height="290" Width="370">    
+        Title="Banking Password" Height="330" Width="370">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
-            
+
             <Label Content="Password" HorizontalAlignment="Stretch" />
             <PasswordBox HorizontalAlignment="Stretch"  Margin="10" Name="passwordBox" />
-            
+
             <Label Content="Indexes" HorizontalAlignment="Stretch" />
             <Grid HorizontalAlignment="Stretch" Margin="10">
                 <Grid.ColumnDefinitions>
@@ -35,14 +35,14 @@
                 <Button x:Name="generateButton" Content="Generate" Grid.Column="0" Click="GenerateButton_Click" ></Button>
                 <Button x:Name="clearButton" Content="Clear" Grid.Column="2" Click="ClearButton_Click"></Button>
             </Grid>
-            
+
             <Separator Height="1" Margin="5"/>
-            
+
             <Label Content="Result"></Label>
             <Grid HorizontalAlignment="Stretch" Margin="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="10"/> 
+                    <ColumnDefinition Width="10"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="10"/>
                     <ColumnDefinition Width="*"/>
@@ -50,8 +50,10 @@
                 <TextBox x:Name="result1TextBox" IsEnabled="False" Grid.Column="0"></TextBox>
                 <TextBox x:Name="result2TextBox" IsEnabled="False" Grid.Column="2"></TextBox>
                 <TextBox x:Name="result3TextBox" IsEnabled="False" Grid.Column="4"></TextBox>
-            </Grid>          
-       
+            </Grid>
+
+            <TextBlock Name="ValidationTextBlock" HorizontalAlignment="Stretch" TextWrapping="Wrap" Foreground="red" Margin="10" Visibility="Hidden"/>
+
 
         </StackPanel>
     </Grid>
