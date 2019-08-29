@@ -32,7 +32,7 @@
                     <ColumnDefinition Width="10"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="generateButton" Content="Generate" Grid.Column="0" ></Button>
+                <Button x:Name="generateButton" Content="Generate" Grid.Column="0" Click="GenerateButton_Click" ></Button>
                 <Button x:Name="clearButton" Content="Clear" Grid.Column="2" Click="ClearButton_Click"></Button>
             </Grid>
             
