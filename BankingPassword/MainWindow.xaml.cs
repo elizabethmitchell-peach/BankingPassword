@@ -56,17 +56,17 @@ namespace BankingPassword
             if (string.IsNullOrEmpty(password))
             {
                 ValidationTextBlock.Visibility = Visibility.Visible;
-                ValidationTextBlock.Text = "Please enter a password";
+                ValidationTextBlock.Text = ValidationMessages.PasswordMissing;
             }
             else if (index1 < 1 | index2 < 1 | index3 < 1)
             {
                 ValidationTextBlock.Visibility = Visibility.Visible;
-                ValidationTextBlock.Text = "Please enter all indexes";
+                ValidationTextBlock.Text = ValidationMessages.IndexesMissing;
             }
             else if (index1 > password.Length | index2 > password.Length | index3 > password.Length)
             {
                 ValidationTextBlock.Visibility = Visibility.Visible;
-                ValidationTextBlock.Text = "Indexes cannot be larger than the length of the password";
+                ValidationTextBlock.Text = ValidationMessages.IndexesInvalid;
             }
             else
             {
